@@ -11,6 +11,7 @@
 		AC31986020E9984A00A6E741 /* PokipediaFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31985F20E9984A00A6E741 /* PokipediaFoundationTests.swift */; };
 		AC31986220E9984A00A6E741 /* PokipediaFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC31985420E9984A00A6E741 /* PokipediaFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		AC31986E20E99E5100A6E741 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31986D20E99E5000A6E741 /* Pokemon.swift */; };
+		AC95AA8920E9EA8A0001C453 /* pokemon_list.csv in Resources */ = {isa = PBXBuildFile; fileRef = AC95AA8820E9EA890001C453 /* pokemon_list.csv */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -32,6 +33,7 @@
 		AC31986120E9984A00A6E741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AC31986D20E99E5000A6E741 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
 		AC31986F20E9A0C400A6E741 /* PokipediaFoundation.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PokipediaFoundation.podspec; sourceTree = SOURCE_ROOT; };
+		AC95AA8820E9EA890001C453 /* pokemon_list.csv */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = pokemon_list.csv; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			children = (
 				AC31985320E9984A00A6E741 /* PokipediaFoundation */,
 				AC31985E20E9984A00A6E741 /* PokipediaFoundationTests */,
+				AC95AA8720E9EA890001C453 /* Resource */,
 				AC31985220E9984A00A6E741 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -89,6 +92,14 @@
 				AC31986120E9984A00A6E741 /* Info.plist */,
 			);
 			path = PokipediaFoundationTests;
+			sourceTree = "<group>";
+		};
+		AC95AA8720E9EA890001C453 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AC95AA8820E9EA890001C453 /* pokemon_list.csv */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -183,6 +194,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC95AA8920E9EA8A0001C453 /* pokemon_list.csv in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
