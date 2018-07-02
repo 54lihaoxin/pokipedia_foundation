@@ -10,6 +10,7 @@
 		AC31985B20E9984A00A6E741 /* PokipediaFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AC31985120E9984A00A6E741 /* PokipediaFoundation.framework */; };
 		AC31986020E9984A00A6E741 /* PokipediaFoundationTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31985F20E9984A00A6E741 /* PokipediaFoundationTests.swift */; };
 		AC31986220E9984A00A6E741 /* PokipediaFoundation.h in Headers */ = {isa = PBXBuildFile; fileRef = AC31985420E9984A00A6E741 /* PokipediaFoundation.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		AC31986E20E99E5100A6E741 /* Pokemon.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC31986D20E99E5000A6E741 /* Pokemon.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +30,8 @@
 		AC31985A20E9984A00A6E741 /* PokipediaFoundationTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PokipediaFoundationTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC31985F20E9984A00A6E741 /* PokipediaFoundationTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PokipediaFoundationTests.swift; sourceTree = "<group>"; };
 		AC31986120E9984A00A6E741 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AC31986D20E99E5000A6E741 /* Pokemon.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Pokemon.swift; sourceTree = "<group>"; };
+		AC31986F20E9A0C400A6E741 /* PokipediaFoundation.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = PokipediaFoundation.podspec; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,7 +75,9 @@
 			isa = PBXGroup;
 			children = (
 				AC31985420E9984A00A6E741 /* PokipediaFoundation.h */,
+				AC31986D20E99E5000A6E741 /* Pokemon.swift */,
 				AC31985520E9984A00A6E741 /* Info.plist */,
+				AC31986F20E9A0C400A6E741 /* PokipediaFoundation.podspec */,
 			);
 			path = PokipediaFoundation;
 			sourceTree = "<group>";
@@ -195,6 +200,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AC31986E20E99E5100A6E741 /* Pokemon.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -391,6 +397,7 @@
 		AC31986920E9984B00A6E741 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PokipediaFoundationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -408,6 +415,7 @@
 		AC31986A20E9984B00A6E741 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				INFOPLIST_FILE = PokipediaFoundationTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
