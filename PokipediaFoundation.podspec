@@ -20,6 +20,7 @@ Pod::Spec.new do |s|
   s.ios.deployment_target = "11.0"
   s.source = { :git => "https://github.com/54lihaoxin/pokipedia_foundation.git", :tag => "#{s.version}" }
   s.source_files = "PokipediaFoundation", "PokipediaFoundation/**/*.{h,m,swift}"
+  s.resource_bundles = { "Resource" => ["Resource/**/*"] }
   s.exclude_files = "PokipediaFoundationTests"
   s.frameworks = "CoreData"
   s.pod_target_xcconfig = { 'SWIFT_VERSION' => '4.2' }

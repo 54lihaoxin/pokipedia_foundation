@@ -6,10 +6,14 @@
 //  Copyright © 2018 Haoxin Li. All rights reserved.
 //
 
-import CoreData
 import Foundation
 
-public final class Pokemon: NSManagedObject {
-    @NSManaged fileprivate(set) var identifier: String
-    @NSManaged fileprivate(set) var name: String
+public final class Pokemon {
+    public let identifier: String
+    public let name: String
+    
+    public init(identifier: String, name: String) {
+        self.identifier = identifier
+        self.name = name
+    }
 }
