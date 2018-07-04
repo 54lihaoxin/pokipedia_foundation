@@ -17,3 +17,10 @@ public final class Pokemon {
         self.name = name
     }
 }
+
+extension Pokemon: CustomStringConvertible {
+    
+    public var description: String {
+        return "\(identifier) - \(name)"
+    }
+}
