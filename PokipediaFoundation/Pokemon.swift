@@ -11,6 +11,10 @@ import Foundation
 public final class Pokemon {
     public let identifier: String
     public let name: String
+    public var details: Details?
+    
+    public struct Details: Decodable {
+    }
     
     public init(identifier: String, name: String) {
         self.identifier = identifier
