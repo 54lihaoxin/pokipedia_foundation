@@ -111,10 +111,10 @@
 			children = (
 				AC0FE45420EB3B0100D73AD8 /* Extensions */,
 				AC0FE46D20ED2FDE00D73AD8 /* Logger.swift */,
+				AC0FE46720ED111900D73AD8 /* NetworkingCenter.swift */,
 				AC31986D20E99E5000A6E741 /* Pokemon.swift */,
 				AC95AA8C20EB08A50001C453 /* PokemonDataManager.swift */,
 				AC0FE46920ED116E00D73AD8 /* PokeAPI.swift */,
-				AC0FE46720ED111900D73AD8 /* NetworkingCenter.swift */,
 				AC31985420E9984A00A6E741 /* PokipediaFoundation.h */,
 				AC31985520E9984A00A6E741 /* Info.plist */,
 				AC31986F20E9A0C400A6E741 /* PokipediaFoundation.podspec */,
