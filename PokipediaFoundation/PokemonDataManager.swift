@@ -19,6 +19,33 @@ public final class PokemonDataManager {
     }
 }
 
+// MARK: - API
+
+extension PokemonDataManager {
+    
+    /// The `Bool` in `completion` stands for whether the fetch is successful or not.
+    public static func fetchDetails(for pokemon: Pokemon, completion: @escaping (Pokemon, Bool) -> Void) {
+        guard pokemon.details == nil else {
+            DispatchQueue.main.async {
+                completion(pokemon, false)
+            }
+            return
+        }
+        PokeAPI.fetchPokemonDetails(forPokemonID: pokemon.identifier) { result in
+            DispatchQueue.main.async {
+                switch result {
+                case .success(let pokemonDetails):
+                    pokemon.details = pokemonDetails
+                    completion(pokemon, true)
+                case .failure(let error):
+                    Logger.logError(error.localizedDescription)
+                    completion(pokemon, false)
+                }
+            }
+        }
+    }
+}
+
 // MARK: - private helpers
 
 private extension PokemonDataManager {

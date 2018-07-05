@@ -16,22 +16,28 @@ struct PokeAPI {
         case pokemonDetails(pokemonID: String)
     }
     
-    static func fetchPokemonDetails(forPokemonID pokemonID: String, completion: @escaping (Pokemon.Details?) -> Void) {
+    enum FetchPokemonDetailsResult {
+        case success(pokemonDetails: Pokemon.Details)
+        case failure(error: Error)
+    }
+    
+    static func fetchPokemonDetails(forPokemonID pokemonID: String, completion: @escaping (FetchPokemonDetailsResult) -> Void) {
         let endpoint = Endpoint.pokemonDetails(pokemonID: pokemonID)
-        NetworkingCenter.getRequest(url: endpoint.url()) { result in
-            switch result {
+        NetworkingCenter.getRequest(url: endpoint.url()) { apiResult in
+            let result: FetchPokemonDetailsResult
+            switch apiResult {
             case .success(let data):
-                if let pokemonDetails = try? JSONDecoder().decode(Pokemon.Details.self, from: data) {
-                    Logger.log("\(#function) pokemon details: \(pokemonDetails)") // TODO
-                } else {
-                    Logger.log("\(#function) parsing faild") // TODO
+                do {
+                    let pokemonDetails = try JSONDecoder().decode(Pokemon.Details.self, from: data)
+                    result = .success(pokemonDetails: pokemonDetails)
+                } catch {
+                    assertionFailure("\(#function) decoding faild: \(error.localizedDescription)")
+                    result = .failure(error: error)
                 }
             case .failure(let error):
-                break // TODO: error handling
+                result = .failure(error: error)
             }
-            DispatchQueue.main.async {
-                completion(nil) // TODO
-            }
+            completion(result)
         }
     }
 }

@@ -12,6 +12,7 @@ struct Logger {
     
     enum Level: String {
         case debug
+        case error
     }
     
     static func log(_ message: String, level: Level = .debug) {
@@ -22,6 +23,12 @@ struct Logger {
             #else
             break // no op
             #endif
+        case .error:
+            print("[\(level)] \(message)")
         }
+    }
+    
+    static func logError(_ message: String) {
+        log(message, level: .error)
     }
 }
